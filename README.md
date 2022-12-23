@@ -1,5 +1,3 @@
-# Jubilee
-
 ## Build Setup
 
 ```bash
