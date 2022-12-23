@@ -1,0 +1,76 @@
+.fb-interest-recent {
+  font-size: 12px;
+
+  button {
+    color: $dblue;
+    border: 0 none;
+    background-color: transparent;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.fb-interest-spinner {
+  position: absolute;
+  right: 100px;
+  top: 13px;
+}
+
+.fb-interest-selection {
+  .title {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      padding: 0;
+      text-transform: inherit;
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 12px;
+      border: 0 none;
+      background-color: transparent;
+    }
+  }
+
+  textarea:disabled {
+    background-color: $white;
+  }
+}
+
+.fb-interest-title, .subtitle-h3 {
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+
+.fb-interest-table {
+  .select-all-head {
+    .custom-checkbox {
+      display: inline;
+      padding-top: 0;
+      top: -2px;
+
+      input {
+        border-radius: 2px;
+      }
+    }
+
+    label {
+      padding-top: 0;
+    }
+  }
+
+  .select-row-name {
+    .custom-checkbox {
+      display: inline;
+      top: -3px;
+    }
+  }
+}

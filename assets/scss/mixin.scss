@@ -1,0 +1,95 @@
+@mixin font-smoothing($variable) {
+  -webkit-font-smoothing: $variable;
+  -moz-font-smoothing: $variable;
+  -ms-font-smoothing: $variable;
+  -o-font-smoothing: $variable;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transition($sec) {
+  -webkit-transition: border-color ease-in-out $sec, box-shadow ease-in-out $sec;
+  -moz-transition: border-color ease-in-out $sec, box-shadow ease-in-out $sec;
+  -o-transition: border-color ease-in-out $sec, box-shadow ease-in-out $sec;
+  transition: border-color ease-in-out $sec, box-shadow ease-in-out $sec;
+}
+
+@mixin background-size($cover) {
+  -webkit-background-size: ($cover);
+  -moz-background-size: ($cover);
+  -o-background-size: ($cover);
+  background-size: ($cover);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: '') {
+  -webkit-box-shadow: $top $left $blur $color #{$inset};
+  -moz-box-shadow: $top $left $blur $color #{$inset};
+  box-shadow: $top $left $blur $color #{$inset};
+}
+
+@mixin font-size($font-size) {
+  font-size: ($font-size / $baseFont) + em;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin responsive-font-size(
+  $min-font-size,
+  $max-font-size,
+  $min-screen-width,
+  $max-screen-width,
+  $font-size-step: 0.1em
+) {
+  font-size: $max-font-size;
+  @media all and (max-width: $min-screen-width) {
+    font-size: $min-font-size;
+  }
+
+  @if $font-size-step <= 0 {
+    @warn "parameter to responsive-font-size: font-size-step must be greater than 0";
+  } @else {
+    $min-scale-factor: $min-font-size / $min-screen-width / 1em * 1px;
+    $max-scale-factor: $max-font-size / $max-screen-width / 1em * 1px;
+
+    $screen-width: round($max-screen-width);
+    $font-size: $max-font-size;
+
+    @while $screen-width >= $min-screen-width {
+      $progress: ($screen-width - $min-screen-width) /
+        ($max-screen-width - $min-screen-width);
+      $scale-factor: $min-scale-factor +
+        $progress *
+        ($max-scale-factor - $min-scale-factor);
+
+      $font-size: $screen-width * $scale-factor / 1px * 1em;
+
+      @media all and (max-width: $screen-width) {
+        font-size: $font-size;
+      }
+
+      $screen-width-step: $font-size-step / $scale-factor / 1em * 1px;
+      @if $screen-width-step < 1px {
+        $screen-width-step: 1px;
+      }
+
+      $screen-width: round($screen-width - $screen-width-step);
+    }
+  }
+}
+
+@mixin smooth-transition {
+  transition: all 0.4s ease;
+}

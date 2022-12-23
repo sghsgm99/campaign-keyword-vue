@@ -1,0 +1,154 @@
+.nav-pills {
+  .nav-link.active,
+  .nav-pills .show > .nav-link {
+    padding: 10px;
+    background: transparent;
+    border-bottom: 1px solid $white;
+    color: $white;
+    border-radius: 0;
+    box-shadow: 0px 0px 8px -3px #ff2770;
+  }
+}
+.card {
+  border: 0;
+  .tabs {
+    .nav-link.active,
+    .nav-pills .show > .nav-link {
+      padding: 10px 20px;
+      color: $white;
+    }
+    .nav-link {
+      text-transform: uppercase;
+      color: #e7e7e7;
+    }
+    .card-header {
+      position: relative;
+      box-shadow: -4px 7px 17px -9px rgb(255 39 112);
+      background: $app-gradient;
+      border: 0;
+      border-radius: 00.25rem;
+    }
+    .tab-content {
+      box-shadow: 0px 0px 10px -6px #dedede;
+      @media (max-width: 991px) {
+        .tab-pane {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+.data-content-tabs {
+  background-color: $lgrey2;
+
+  .breadcrumbs + & {
+    height: calc(100% - 82px);
+  }
+
+  .tab-content > .active {
+    background-color: $lgrey2;
+  }
+
+  > .card {
+    border-radius: 0;
+  }
+
+  .card {
+    .tabs {
+      .card-header {
+        background: transparent;
+        box-shadow: none;
+        padding: 0 1.5rem;
+        border-radius: 0;
+      }
+
+      .nav-link {
+        font-size: 12px;
+        color: $lgrey4;
+        padding: 10px 20px;
+        border: 1px solid $lgrey3;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-radius: 4px 4px 0 0;
+        position: relative;
+
+        &:before {
+          content: '';
+          border-top: 34px solid transparent;
+          border-bottom: 0px solid transparent;
+          border-left: 6px solid $white;
+          position: absolute;
+          right: -6px;
+          top: 0;
+          z-index: 1;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 1px;
+          right: -4px;
+          height: 100%;
+          width: 1px;
+          background-color: $lgrey3;
+          transform: rotate(-10deg);
+          z-index: 1;
+        }
+
+        &.active {
+          box-shadow: none;
+          color: $black2;
+          background-color: $lgrey2;
+          font-weight: 600;
+          border-left-color: $lgrey3;
+          z-index: 1;
+
+          &:before {
+            border-top-width: 35px;
+            border-left-color: $lgrey2;
+          }
+        }
+      }
+
+      .tab-content {
+        box-shadow: none;
+        border-top: 1px solid $lgrey3;
+        @include smooth-transition;
+      }
+    }
+  }
+
+  .card-header-pills {
+    margin: 0 0 -1px;
+
+    li + li {
+      margin-left: -4px;
+    }
+
+    li:first-child {
+      .nav-link {
+        border-left-color: $lgrey3;
+      }
+    }
+  }
+
+  .tabs .card-header + .tab-content {
+    background-color: $lgrey2;
+  }
+}
+
+.tabs-header-options {
+  padding-bottom: 10px;
+  top: 0;
+  right: 0;
+  background: white;
+  z-index: 1;
+  font-size: 14px;
+  text-align: right;
+  
+  @media (min-width: 767px) {
+    position: absolute;
+    padding-bottom: 0;
+  }
+}

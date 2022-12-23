@@ -1,0 +1,133 @@
+input {
+  width: 100%;
+}
+
+label {
+  padding-top: 1em;
+  text-transform: uppercase;
+}
+
+.creator-studio-carousel {
+  display: none;
+}
+
+.item-body {
+  width: 85%;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+.creator-studio-carousel .carousel-item {
+  background: #fff;
+  right: 0;
+  left: 0;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #000;
+  text-align: justify;
+  max-height: 15em;
+}
+
+.creator-studio-carousel .item-body {
+  width: 85%;
+  margin: auto;
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.creator-studios-button {
+  max-width: 150px;
+  width: 100%;
+  background-color: #f2f2f2 !important;
+  color: #ff2770 !important;
+  border: none !important;
+  border-radius: 10px;
+  padding: 2%;
+  border: 0;
+  text-transform: uppercase;
+}
+
+.add-to-editor {
+  width: 100% !important;
+  max-width: 100%;
+  margin: 0 auto;
+  bottom: 0;
+}
+.color-pink {
+  background-color: #ff2770 !important;
+}
+.get-results {
+  max-width: 100%;
+  background-color: #ff2770 !important;
+  color: #f2f2f2 !important;
+}
+#text-matched {
+  height: 10em;
+  overflow: auto;
+}
+#data-container {
+  max-height: 50em;
+  overflow: auto;
+  border-right: 1px solid #ccc;
+}
+
+.spinner-border {
+  width: 1rem;
+  height: 1rem;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.readableapi-container .readableapi-tabs {
+  max-height: 30em;
+  overflow: auto;
+}
+.readableapi-container .data-container {
+  display: flex;
+  justify-content: space-between;
+}
+.readableapi-container .data-title {
+  width: 60%;
+  text-align: left;
+}
+.readableapi-container .data-emoticon,
+.data-number {
+  width: 20%;
+  text-align: left;
+}
+.readableapi-container .card .tabs .nav-link.active,
+.card .tabs .nav-pills .show > .nav-link {
+  color: #000;
+  font-weight: 700;
+}
+.readableapi-container label {
+  font-weight: 900;
+}
+
+// copywriting
+.copy-btn {
+  background-color: $green;
+  border-color: $green;
+  height: 45px;
+  &.disabled {
+    border-color: $green;
+    background-color: $green;
+  }
+}

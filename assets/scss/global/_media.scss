@@ -1,0 +1,72 @@
+@media screen and (max-width: 1200px) {
+	.data-head-date {
+		max-width: 100%;
+		padding-left: 0 !important;
+		.half-width {
+			width: 50%;
+			input {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.cstm-flex {
+		flex-direction: column;
+	}
+	.navbar-toggler {
+		display: block !important;
+		background-color: #fff;
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin-top: 42px;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.navbar {
+		padding: 0px;
+	}
+	.data-head {
+		flex-wrap: wrap;
+		.data-head-left {
+			margin-bottom: 10px !important;
+		}
+		.data-head-right {
+			.search {
+				width: 50%;
+				input {
+					width: 100%;
+				}
+			}
+			select {
+				width: 50%;
+				height: 41px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.data-head {
+		flex-wrap: wrap;
+		.data-head-left {
+			flex-wrap: wrap;
+			.create {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.data-page {
+		flex-wrap: wrap;
+	}
+}
+
+// section#dashboard .data-content .table.b-table.b-table-selectable:not(.b-table-selectable-no-click) > tbody > tr,
+// section#dashboard .data-content .table.b-table > tbody > .table-active,
+// section#dashboard .data-content .table.b-table.b-table-selectable:not(.b-table-selectable-no-click) tr.b-table-row-selected.table-active td{
+// 	background-color: #2014300a!important;
+// }

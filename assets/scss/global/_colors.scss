@@ -1,0 +1,61 @@
+/*=================================
+        COLORS & FONTS
+=================================*/
+$bgcolor: #f7f6f8;
+$white: #ffffff;
+$black: #484848;
+$black2: #201430;
+$fade: #2e223e;
+$grey: #656565;
+$grey2: #8f8f8f;
+$lgrey: #898989;
+$lgrey2: #ebf1f0;
+$lgrey3: #dfdfdf;
+$lgrey4: #7b7b7b;
+$lgrey5: #747474;
+$lgrey6: #4a4a4a;
+$lgrey7: #acacac;
+$gray-2: #e8ecef;
+$mgrey: #ccc;
+$green: #5ae9a6;
+$green2: #67b964;
+$green3: #67b964;
+$green4: #39d466;
+$red: #d44739;
+$dgreen: #66cfaf;
+$lpurple: #9e66cf;
+$purple: #201430;
+$pink: #f24272;
+$yellow: #d48d09;
+$blue: #48b3e4;
+$dblue: #0969c9;
+$app-gradient: linear-gradient(
+  90deg,
+  rgba(255, 39, 112, 1) 0%,
+  rgba(255, 79, 138, 1) 35%,
+  rgba(246, 157, 119, 1) 100%
+);
+
+// Pink Analytics and Charts
+$pink1: #f24272;
+$pink2: #f2678d;
+$pink3: #faa2bc;
+$pink4: #fdd4e0;
+
+/*=================================
+        TABLE COLORS
+=================================*/
+$thcolor: #dedede;
+
+// Dark Mode Colors
+$dark1: #312e3b; // used for primary bg
+$dark2: #37374a; // used for secondary bg
+$dark3: #555a5e; // used for disabled
+$dark4: #404354; // used for inputs and alternating table (even)
+$dark5: #3e4152; // used for alternating table (odd)
+$dark6: #333644; // table head and hr
+$dark7: #494f5c; // for border colors
+$dark8: #25243c; // compliments secondary bg
+$textdark1: #aab8c5; // for the text
+$textdark2: #acacac; // for the input placeholder
+$linkdark1: #438bd3; // for links

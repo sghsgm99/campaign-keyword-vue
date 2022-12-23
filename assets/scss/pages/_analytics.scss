@@ -1,0 +1,52 @@
+.revenue-nav {
+  .analytics-head {
+    position: relative;
+    padding: 15px 20px;
+    color: $white;
+    height: 100%;
+    overflow: hidden;
+    @include border-radius(0.25rem);
+    .rev-value {
+      $size: (35px / $baseFont) + 0em;
+      @include responsive-font-size(0.7em, $size, 640px, 1200px, 1.3em);
+      font-weight: $bold;
+      line-height: 1.2;
+    }
+    .rev-title {
+      @include font-size(12px);
+      text-transform: uppercase;
+    }
+    .bg-text {
+      position: absolute;
+      right: 0;
+      top: 34px;
+      font-size: 66px;
+      font-weight: 900;
+      opacity: 0.2;
+    }
+  }
+
+  .revenue {
+    background-color: $dgreen;
+  }
+
+  .clicks {
+    background-color: $lpurple;
+  }
+
+  .impressions {
+    background-color: $pink;
+  }
+
+  .reach {
+    background-color: $blue;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 95%;
+  }
+
+  @media (min-width: 1600px) {
+    max-width: 80%;
+  }
+}

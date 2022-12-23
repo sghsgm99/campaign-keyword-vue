@@ -1,0 +1,56 @@
+/*================================
+         	LOGIN
+================================*/
+#main-login {
+	position: relative;
+	overflow-x: hidden;
+	.bg-logo {
+		position: absolute;
+		right: -115px;
+		top: -98px;
+		img {
+			width: 400px;
+			opacity: 0.1;
+		}
+	}
+	.remember-me {
+		label {
+			color: $white;
+			text-transform: none !important;
+		}
+	}
+}
+#login-wrapper {
+	max-width: 490px;
+	width: 100%;
+	margin: 0 auto;
+	img {
+		max-width: 302px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	form {
+		background-color: $fade;
+		@include border-radius(20px);
+		input {
+			@include font-size(14px);
+		}
+		input[type="text"],
+		input[type="password"] {
+			width: 100%;
+			background-color: $purple;
+			color: $white;
+		}
+		.submit,
+		input[type="submit"] {
+			color: $white;
+			background-color: $pink;
+			// max-width: 108px;
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 600;
+			border: 0;
+			height: 48px;
+		}
+	}
+}

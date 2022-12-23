@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap');
+/*===============================
+		FONT
+===============================*/
+
+$baseFont: 16px;
+$worksans: 'Work Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$bold: 600;
+$bolder: 700;
+$light: 300;
+$medium: 400;
+
+h1 {
+  $size: (28px / $baseFont) + 0em;
+  @include responsive-font-size(1em, $size, 640px, 1200px, 0.1em);
+  font-family: $montserrat;
+  font-weight: $bolder;
+}
+
+a,
+a:hover,
+a:focus {
+  color: $dblue;
+  text-decoration: none;
+}

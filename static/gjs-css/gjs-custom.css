@@ -1,0 +1,18 @@
+*[data-highlightable]:nth-child(odd) {
+  outline: 1px dashed #FFF;
+  outline-offset: -2px;
+  padding: 5px;
+  background-color: #00000012
+}
+
+*[data-highlightable]:nth-child(even) {
+  outline: 1px dashed #000;
+  outline-offset: -2px;
+  padding: 5px;
+  background-color: #f5f5f512;
+}
+
+*[data-gjs-type='link'] {
+  padding: 5px;
+  outline: 2px double green;
+}

@@ -1,0 +1,175 @@
+.landing-page {
+  .container {
+    @media (min-width: $xl) {
+      max-width: 1200px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $black2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  .section-padding {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media (min-width: $lg) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+  }
+
+  .section-title {
+    font-size: 38px;
+
+    @media (min-width: $lg) {
+      font-size: 55px;
+    }
+  }
+
+  h2.section-title {
+    @media (max-width: $lg - 1) {
+      font-size: 30px;
+    }
+  }
+
+  p,
+  .feature-list h3 {
+    font-size: 18px;
+    @media (min-width: $lg) {
+      font-size: 25px;
+    }
+
+    small {
+      font-size: 12px;
+
+      @media (min-width: $md) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .note {
+    color: #9f9e9e;
+  }
+
+  .landing-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .navbar-brand img {
+      width: 200px;
+    }
+  }
+
+  .icon-wrap {
+    margin-right: 12px;
+
+    img {
+      width: 35px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    @media (min-width: $md) {
+      margin-right: 20px;
+
+      img {
+        width: 60px;
+        height: 50px;
+      }
+    }
+  }
+
+  .feature-list {
+    h3 {
+      max-width: 180px;
+    }
+  }
+
+  .form-small-wrap {
+    max-width: 500px;
+
+    ::placeholder {
+      font-weight: 300;
+    }
+
+    :-ms-input-placeholder {
+      font-weight: 300;
+    }
+
+    ::-ms-input-placeholder {
+      font-weight: 300;
+    }
+
+    .form-control {
+      border: 0 none;
+    }
+  }
+
+  .landing-footer {
+    color: $grey2;
+    background-color: #434343;
+  }
+
+  // Privacy Page
+  &.privacy-policy {
+    p {
+      font-size: 16px;
+    }
+
+    h1,
+    .h1 {
+      font-size: 34px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 18px;
+    }
+
+    h4 {
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 24px;
+
+      li {
+        margin-bottom: 14px;
+      }
+    }
+
+    .left {
+      ol {
+        padding-left: 20px;
+        font-weight: 600;
+        color: $black2;
+      }
+
+      button {
+        padding: 0;
+        border: 0 none;
+        background-color: transparent;
+        text-align: unset;
+        font-weight: 600;
+        color: $black2;
+      }
+    }
+  }
+  .privacy-banner {
+    background-color: #e3e0e6;
+  }
+}

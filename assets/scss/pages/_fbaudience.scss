@@ -1,0 +1,82 @@
+.fbaud-create-dropdown {
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-toggle:after {
+    margin-left: 2.255em;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+  }
+}
+
+.fbaud-channel-list {
+  label {
+    padding-top: 3px;
+    text-transform: initial;
+    color: $grey;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.fbaud-filter-list {
+  > label {
+    font-size: 14px;
+    padding: 0;
+  }
+
+  .btn-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: $white;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px 18px;
+
+    i {
+      transition: 0.3s ease all;
+    }
+
+    &.not-collapsed {
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .collapse {
+    margin-top: 0;
+
+    > .card {
+      border-radius: 0;
+    }
+  }
+
+  .card-body {
+    padding: 8px 18px 18px;
+  }
+
+  .collapse + .btn-filter {
+    border-top: 1px solid $lgrey3;
+  }
+
+  .fbaud-filter-accordion {
+    border: 1px solid $lgrey3;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.fb-lookalike-table {
+  .custom-checkbox {
+    display: inline;
+    top: -3px;
+  }
+}

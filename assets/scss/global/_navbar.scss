@@ -1,0 +1,21 @@
+.logo-side-wrap {
+	img {
+		max-width: 230px;
+	}
+}
+
+.navbar-toggler {
+	display: none;
+	background-color: $pink;
+	color: $white;
+}
+
+.navbar {
+	padding: 0px;
+}
+
+.half-width {
+	input {
+		width: 100%;
+	}
+}

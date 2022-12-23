@@ -1,0 +1,361 @@
+/*================================
+         MAIN STYLES
+================================*/
+html,
+body,
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+
+body {
+  font: $baseFont $worksans;
+  background-color: $purple;
+}
+
+a img {
+  text-decoration: none;
+  border: 0px;
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+section,
+header,
+footer {
+  float: left;
+  width: 100%;
+}
+input,
+select {
+  height: 46px;
+}
+
+.key-btn,
+.primary-btn,
+.wp-btn {
+  height: 45px;
+  border: 0;
+  border-radius: 0.25rem;
+  font-size: 12px;
+  line-height: 14px;
+  color: $white;
+}
+.wp-btn {
+  width: 123px;
+  background-color: $green3;
+}
+.key-btn {
+  width: 174px;
+  opacity: 1;
+  background-color: $green3;
+}
+.primary-btn,
+input[type='submit'].primary-btn {
+  border: 0;
+  background-color: $pink;
+  border-radius: 0.25rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $pink2;
+    border-color: $pink2;
+  }
+
+  &:disabled {
+    background-color: $pink2;
+    border-color: $pink2;
+  }
+}
+
+.secondary-btn,
+input[type='submit'].secondary-btn {
+  border: 0;
+  background-color: $green3;
+  border-radius: 0.25rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover {
+    color: $white;
+    background-color: $pink2;
+    border-color: $pink2;
+  }
+
+  &:disabled {
+    background-color: $pink2;
+    border-color: $pink2;
+  }
+}
+
+.primary-outline-btn {
+  border-radius: 0.25rem;
+  line-height: 30px;
+  height: 46px;
+}
+
+.btn-plain {
+  color: $grey;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  border: 0 none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $grey;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.db-content {
+  background-color: $gray-2;
+  min-height: 100vh;
+  width: 100%;
+
+  .search-big {
+    position: relative;
+    input {
+      text-indent: 26px;
+    }
+    .fa-search {
+      position: absolute;
+      top: 15px;
+      left: 12px;
+      color: $purple;
+    }
+  }
+}
+
+%white-block {
+  background-color: $white;
+  border: 1px solid $lgrey3;
+  border-radius: 0.25rem;
+}
+
+.accordion > .card:not(:last-of-type) {
+  border-radius: 0.25rem;
+}
+
+.accordion-gray,
+.accordion-dark {
+  .card-header {
+    border-bottom: 0;
+    box-shadow: none;
+
+    button {
+      position: relative;
+      padding-right: 28px;
+      background-color: #f1f1f1;
+      color: $black2;
+      border: 0 none;
+      box-shadow: none;
+
+      &.not-collapsed {
+        .fas {
+          transform: translateY(-50%) rotateZ(-180deg);
+        }
+      }
+    }
+
+    h5 {
+      font-weight: 400;
+      text-transform: none;
+      font-size: 16px;
+    }
+
+    .fas {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotateZ(0);
+      transition: 0.3s ease all;
+    }
+  }
+}
+
+.accordion-dark {
+  .card-header {
+    button {
+      background-color: $black2;
+      color: #f1f1f1;
+
+      &:hover {
+        background-color: lighten($black2, 15%);
+      }
+    }
+  }
+}
+
+.card-dark,
+.data-content-tabs .tabs .card-dark {
+  border: 1px solid $lgrey3;
+
+  div.card-header {
+    background-color: $black2;
+    border-radius: 0.25rem 0.25rem 0 0;
+    padding: 14px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $white;
+  }
+}
+
+// Spacing
+.mt-10px {
+  margin-top: 10px;
+}
+
+.mt-30px {
+  margin-top: 30px;
+}
+
+.mb-10px {
+  margin-bottom: 10px;
+}
+
+.mb-12px {
+  margin-bottom: 12px;
+}
+
+.p-12px {
+  padding: 12px;
+}
+
+// Row spacing
+.gx-1 {
+  margin-right: -5px;
+  margin-left: -5px;
+
+  [class*='col'] {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Width
+.w-150 {
+  width: 150px;
+}
+
+// Background
+.background-white {
+  background-color: $white;
+}
+
+// Color
+.color-lgray {
+  color: #9aa4ac;
+}
+
+.color-gray {
+  color: $grey2;
+}
+
+// Link
+.link-blue, .btn.link-blue {
+  color: $dblue;
+  border: 0;
+  background: 0 none;
+  font-size: 14px;
+}
+
+// Badge
+.badge {
+  font-weight: 400;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.draggable-list .list-group-item,
+[draggable='false'] {
+  cursor: move;
+  cursor: grab;
+
+  &:focus {
+    background-color: #e1e1e1;
+  }
+}
+
+[draggable='true'] {
+  cursor: grabbing;
+}
+
+.draggable-list {
+  .list-group-item {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .sortable-chosen:hover {
+    background-color: #e1e1e1;
+  }
+}
+
+.list-group-plain,
+.draggable-list {
+  .list-group-item {
+    border: 0;
+    border-radius: 0;
+
+    &:hover {
+      background-color: #e1e1e1;
+    }
+  }
+}
+
+.bg-purple {
+  background-color: $black2;
+}
+
+.bg-lpink {
+  background-color: #e8e1f2;
+}
+
+.text-pink {
+  color: #f24272;
+}
+
+.font-12px {
+  font-size: 12px !important;
+}
+
+.font-14px {
+  font-size: 14px !important;
+}
+
+.font-16px {
+  font-size: 16px !important;
+}
+
+.font-20px {
+  font-size: 20px !important;
+}
+
+.gx-3 {
+  margin-right: -8px;
+  margin-left: -8px;
+
+  > [class^="col"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

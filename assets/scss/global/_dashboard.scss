@@ -1,0 +1,245 @@
+@import './fonts';
+/*================================
+         	DASHBOARD
+================================*/
+.dashboard {
+  input:focus-visible {
+    outline: none;
+  }
+  .show-more {
+    width: 80px;
+    height: 36px !important;
+  }
+  .hor-line {
+    border: solid 1px #f5f4f4;
+    box-shadow: 0px 2px 10px -1px #ebebeb;
+  }
+  .breadcrumbs {
+    background-color: $white;
+  }
+  .breadcrumbs-list {
+    a {
+      text-transform: uppercase;
+      font-weight: $bold;
+      @include font-size(14px);
+      color: $black;
+    }
+    a.active {
+      color: $pink;
+    }
+    span {
+      margin: 0 10px;
+    }
+  }
+
+  .data-head {
+    .status {
+      max-width: 200px;
+    }
+    .data-head-left {
+      a.btn {
+        background-color: $app-gradient;
+        color: $white;
+        @include font-size(14px);
+        text-transform: uppercase;
+        border: 0;
+        line-height: 100%;
+        width: 100%;
+        padding: 15px;
+      }
+      nav {
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li {
+            list-style-type: none;
+            display: inline;
+            margin: 0 10px;
+            a {
+              @include font-size(14px);
+              font-weight: $light;
+              text-transform: uppercase;
+              color: $mgrey;
+            }
+          }
+        }
+      }
+    }
+
+    //fixed
+    .data-head-right {
+      .search {
+        position: relative;
+        input {
+          text-indent: 25px;
+        }
+        .fa-search {
+          position: absolute;
+          top: 14px;
+          left: 12px;
+          color: $lgrey;
+        }
+      }
+    }
+    .data-head-date {
+      input {
+        text-transform: uppercase;
+        color: $lgrey;
+      }
+      .right-date {
+        @include border-radius(10px 0 0 10px);
+      }
+      .left-date {
+        @include border-radius(0 10px 10px 0);
+      }
+    }
+  }
+  .report-dashboard {
+    .analytics-head {
+      height: 92px;
+      box-shadow: none;
+      .rev-title {
+        line-height: 14px;
+      }
+      .rev-value {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+
+    div.search-big {
+      @media (min-width: 768px) {
+        width: 33%;
+      }
+    }
+  }
+
+  .header-sec {
+    label {
+      color: #9aa4ac;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    .head-custom-select {
+      height: 45px;
+      font-size: 12px;
+      text-transform: capitalize;
+      min-width: 234px;
+      appearance: none;
+      background-size: auto;
+      border: 1px solid #d8d8d8;
+      background-position-x: 95%;
+      background-image: url('../images/chevron-down.svg');
+      option {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .calendar-select {
+    position: relative;
+    img {
+      position: absolute;
+      width: 20px;
+      top: 13px;
+      left: 16px;
+    }
+    .head-custom-select {
+      text-indent: 25px;
+    }
+  }
+
+  //pagination
+  .data-page {
+    .data-page-left {
+      p {
+        @include font-size(14px);
+        font-weight: 400;
+        color: $grey;
+      }
+    }
+    .data-page-right {
+      select {
+        padding: 6px 10px;
+        margin: 0 15px;
+        @include border-radius(5px);
+        color: $grey;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        @include font-size(14px);
+        font-weight: 400;
+        color: $grey;
+      }
+      
+    }
+  }
+}
+
+ul.pagination {
+  margin: 0;
+  box-shadow: -2px 2px 14px -6px #ebebeb;
+  li {
+    &.active {
+      button {
+        box-shadow: 0px 0px 14px -6px #ff2770;
+      }
+    }
+    button {
+      height: 36px;
+      border: 1px solid $lgrey2;
+    }
+    a,
+    span {
+      padding: 8px 12px;
+      @include font-size(14px);
+      font-weight: $bold;
+      border: solid 1px $lgrey2;
+    }
+    a {
+      color: $black;
+      border: solid 1px #f5f4f4;
+      background-color: $white;
+    }
+    span.current {
+      background: $app-gradient;
+      color: $white;
+    }
+  }
+
+  li:first-child {
+    a {
+      @include border-radius(5px 0 0 5px);
+      border-right: 0;
+    }
+  }
+  li:last-child {
+    a {
+      border-left: 0;
+      @include border-radius(0 5px 5px 0);
+    }
+  }
+
+  .page-item.disabled .page-link {
+    color: $lgrey7;
+  }
+
+  .page-item .page-link {
+    color: $black;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  .active {
+    .page-link, .page-link:hover {
+      background-color: $pink;
+      border: $pink;
+      color: $white;
+    }
+  }
+}

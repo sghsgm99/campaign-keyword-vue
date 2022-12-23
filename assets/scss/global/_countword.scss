@@ -1,0 +1,23 @@
+.count-content {
+  p,
+  span {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .count-words {
+    h3 {
+      line-height: 29px;
+      letter-spacing: 2.5px;
+      font-size: 25px;
+      color: $green2;
+    }
+  }
+  .count-characters {
+    h3 {
+      line-height: 19px;
+      letter-spacing: 1.6px;
+      color: $green2;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,265 @@
+.cmanager-nav {
+  max-width: 100%;
+
+  .revenue {
+    background-color: $dgreen;
+  }
+  .clicks {
+    background-color: $lpurple;
+  }
+  .impressions {
+    background-color: $pink;
+  }
+  .spend {
+    background-color: $yellow;
+  }
+  .profit {
+    background-color: $blue;
+  }
+
+  .analytics-head {
+    cursor: pointer;
+    &.disabled {
+      background-color: #9aa4ac;
+
+      .rev-title {
+        color: #eee;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cmanager-nav {
+    flex: auto;
+    .analytics-head {
+      word-break: break-word;
+    }
+  }
+  .cmanager-head {
+    flex-wrap: wrap;
+  }
+}
+
+.cmanager-graph {
+  background-color: $white;
+}
+
+.cmanager-content {
+  .table-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .control-wrap {
+      & + .control-wrap {
+        margin-left: 10px;
+      }
+
+      &.search {
+        position: relative;
+
+        > button {
+          animation: opacity 0.4s ease;
+        }
+
+        > div {
+          position: relative;
+          top: -4px;
+          display: none;
+          animation: opacity 0.4s ease;
+
+          .fa-search {
+            position: absolute;
+            top: 50%;
+            left: 7px;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: #7a848d;
+          }
+
+          input[type='text'] {
+            padding: 6px 25px;
+            width: 135px;
+            height: 35px;
+            font-size: 12px;
+            border: 0;
+          }
+
+          button {
+            position: absolute;
+            top: 50%;
+            right: 2px;
+            transform: translateY(-50%);
+            border: 0;
+            background-color: transparent;
+            color: #201430;
+          }
+        }
+
+        &.active {
+          background-color: transparent;
+          > button {
+            display: none;
+          }
+
+          > div {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .control-btn {
+      background-color: transparent;
+      border: 0 none;
+      color: #7a848d;
+      font-size: 12px;
+      padding: 7px;
+      border-radius: 4px;
+      transition: all 0.4s ease;
+
+      i {
+        margin-right: 1px;
+      }
+
+      &:hover {
+        background-color: #dfe5e4;
+      }
+    }
+  }
+}
+
+.cmanager-modal {
+  .modal-body {
+    padding: 0;
+  }
+
+  .search-filter {
+    display: flex;
+    border: 0;
+    align-items: center;
+
+    input {
+      border: 0;
+      box-shadow: none;
+    }
+
+    i {
+      padding-right: 10px;
+      color: #7a848d;
+    }
+  }
+
+  .custom-checkbox {
+    label {
+      padding-top: 0;
+    }
+  }
+
+  .custom-control {
+    padding: 10px 10px 10px 38px;
+  }
+
+  .custom-control-label {
+    color: #707070;
+
+    &:before,
+    &:after {
+      top: 2px;
+    }
+
+    &:before {
+      border-radius: 3px;
+    }
+  }
+
+  .custom-control-input {
+    &:checked ~ .custom-control-label {
+      &:before {
+        border-color: #f464a2;
+        background-color: #f464a2;
+      }
+    }
+  }
+
+  .select-all {
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+  }
+
+  .select-group {
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+    .custom-control {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  .apply-button {
+    border-top: 1px solid #dfdfdf;
+
+    button {
+      color: #f464a2;
+      border: 0 none;
+      background-color: transparent;
+
+      i {
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
+.sub-page-name {
+  font-weight: 500;
+  border-left: 1px solid #d1d1d1;
+  padding: 8px 0 8px 15px;
+  margin-left: 15px;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#create-campaign, #create-campaign-sidebar {
+  .modal-dialog {
+    width: fit-content;
+  }
+}
+
+.create-campaign-btns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  > div {
+    margin: 10px;
+  }
+
+  .article-radio-selector {
+    label {
+      width: 130px;
+
+      &.ads {
+        width: 100%;
+      }
+    }
+  }
+
+  .btn {
+    padding: 16px 20px;
+  }
+}
